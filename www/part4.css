@@ -1,0 +1,16 @@
+.toast {
+  position: fixed; left: 50%; bottom: calc(28px + var(--safe-b));
+  transform: translateX(-50%) translateY(8px);
+  background: rgba(44,44,46,.92); color: var(--t);
+  border: 1px solid var(--stroke2); backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 11px 16px; border-radius: 14px; font-size: 13px; font-weight: 500;
+  box-shadow: 0 12px 30px rgba(0,0,0,.4); z-index: 30;
+  opacity: 0; transition: opacity .2s, transform .2s;
+  pointer-events: none;
+}
+.toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+@media (min-width: 520px) {
+  .view { padding-top: 28px; }
+}

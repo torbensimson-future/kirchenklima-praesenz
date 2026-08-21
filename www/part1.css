@@ -1,0 +1,58 @@
+.setup-sub { margin: 6px 0 22px; color: var(--m); font-size: 15px; }
+.setup-card {
+  text-align: left;
+  background: var(--card);
+  border: 1px solid var(--stroke);
+  border-radius: 24px;
+  padding: 18px 16px 16px;
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  box-shadow: var(--shadow);
+}
+.field { display: block; margin-bottom: 12px; }
+.field span {
+  display: block; font-size: 12px; color: var(--m); margin-bottom: 6px;
+  font-weight: 500; letter-spacing: .01em;
+}
+.field input {
+  width: 100%; padding: 14px 14px; border-radius: 14px;
+  border: 1px solid var(--stroke2); background: rgba(255,255,255,.04);
+  color: var(--t); font-size: 16px; outline: none;
+  transition: border-color .2s, background .2s;
+}
+.field input:focus {
+  border-color: rgba(10,132,255,.55);
+  background: rgba(10,132,255,.06);
+}
+.setup-hint { margin-top: 16px; color: var(--m2); font-size: 12px; line-height: 1.45; }
+.err { color: var(--red); font-size: 13px; min-height: 1.2em; margin: 10px 0 0; }
+
+.btn {
+  border: none; border-radius: 14px; padding: 13px 16px;
+  font-size: 15px; font-weight: 600; color: var(--t);
+  background: rgba(255,255,255,.08); cursor: pointer;
+  transition: transform .12s ease, opacity .15s, background .15s;
+}
+.btn:active { transform: scale(.97); opacity: .9; }
+.btn.primary {
+  background: linear-gradient(180deg, #1a8fff, #0a84ff);
+  color: #fff; box-shadow: 0 8px 24px rgba(10,132,255,.35);
+}
+.btn.primary.lg {
+  width: 100%; margin-top: 6px; padding: 15px 16px; border-radius: 16px;
+  font-size: 16px; position: relative;
+}
+.btn.soft { background: rgba(255,255,255,.07); border: 1px solid var(--stroke); }
+.btn.soft.danger { color: var(--red); background: rgba(255,69,58,.1); border-color: rgba(255,69,58,.18); }
+.btn-spinner {
+  width: 18px; height: 18px; border-radius: 50%;
+  border: 2px solid rgba(255,255,255,.25); border-top-color: #fff;
+  display: inline-block; animation: spin .7s linear infinite;
+  position: absolute; right: 18px; top: 50%; margin-top: -9px;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.top {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  margin-bottom: 12px;
+}
